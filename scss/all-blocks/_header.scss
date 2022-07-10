@@ -1,10 +1,13 @@
 .header {
+
   padding: 59px 0;
   background-color: $bg-color;
 }
 
 
 .header__innier {
+  position: relative;
+  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -51,18 +54,20 @@
   display: none;
 }
 
-.humburger:hover {
-  opacity: 0.8;
-}
 
 .humburger__modal {
   position: absolute;
-  top: 130px;
+  top: 113px;
+  right: 0;
   left: 0;
-  bottom: 0;
-  padding: 35px 157px 0 55px;
+  bottom: -400px;
+  width: 80%;
+  padding-top: 50px;
+  height: 400px;
+  text-align: center;
   margin: auto;
-  background-color: $bg-color;
+  background-color: rgba(37, 37, 37, 0.98);
+  box-shadow: 0 0 100px 100px $bg-color;
   display: none;
 }
 
@@ -119,5 +124,12 @@
 
   .humburger {
     display: block;
+  }
+}
+
+@include resposible(520px) {
+  .header__logo {
+    width: 131px;
+    height: 20px;
   }
 }
